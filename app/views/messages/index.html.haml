@@ -1,0 +1,31 @@
+.contents
+  .top
+    .side
+      .side-box
+        .side-box__logo__square
+        .side-box__logo__live
+    .main
+      .main-box
+        %ul.main-box
+          %li.main-box__user
+          %li.main-box__new-topic     
+          %li.main-box__all-topic          
+          %li.main-box__logout
+ 
+  .content
+    
+
+  .down
+    .down-box
+      = link_to "https://www.facebook.com/profile.php?id=100046093152239", class: "down-box__btn down-box__btn--facebook" do
+        = icon('fab', 'facebook-square', class: "down-box__btn--icon")
+        %span<>
+          Facebook
+      = link_to "https://twitter.com/@inoguchikeioda", class: "down-box__btn down-box__btn--twitter" do
+        = icon('fab', 'twitter', class: "down-box__btn--icon")
+        %span<>
+          Twitter
+      = link_to "https://www.instagram.com/naohiroprogram/", class: "down-box__btn down-box__btn--instagram" do
+        = icon('fab', 'instagram', class: "down-box__btn--icon")
+        %span<>
+          Instagram
