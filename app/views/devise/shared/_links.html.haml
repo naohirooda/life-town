@@ -1,0 +1,6 @@
+- if controller_name != 'sessions'
+  = link_to "Log in", new_session_path(resourse_name),class: 'btn'
+  %br/
+- if devise_mapping,registerble? && controller_name != 'registractions'
+  = link_to "Sign up", new_registration_path(resourse_name),class: 'btn'
+  %br/

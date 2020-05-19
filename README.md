@@ -5,9 +5,9 @@
 |name|string|null: false, add_index: true|
 |email|string|null: false, unique: true|
 |password|stirng|null: false|
-|facebook|string|null: false|
-|twitter|string|null: false|
-|instagram|string|null: false|
+|facebook|text|
+|twitter|text|
+|instagram|text|
 ### Association
 - has_many :comments
 - has_mamny :spot
@@ -28,15 +28,21 @@
 |------|----|-------|
 |type|string|null: false|
 |name|string|null: false|
-|url||string|null: false|
+|url||text|
 |comment|text|null: false|
 ### Association
+- has_many :comment
+- has_many :good
+- belongs_to :user
 
-
+## goodテーブル
 |Column|Type|Options|
 |------|----|-------|
-
-
+|user_id|integer|null: false, foreign_key: true|
+|spot_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :spot
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
