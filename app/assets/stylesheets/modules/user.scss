@@ -1,0 +1,130 @@
+.account-page {
+  .account-page__inner {
+
+    width: 980px;
+    margin: 70px auto;
+    padding: 70px;
+    background-color: #ceced4;
+    border: 3px solid rgb(236, 236, 109);
+    border-radius: 10px;
+    
+
+    .account-page__inner--left, .account-page__inner--right{
+      float: left;
+      width: 50%;
+    }
+    &:after{
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+  .account-page__header{
+    h2{
+      letter-spacing: 2px;
+      font-size: 50px;
+      font-weight: 150;
+      &:after{
+      content:"";
+      display: block;
+      width: 50px;
+      margin-top: 10px;
+      border-bottom: 2px solid rgb(236, 236, 109);
+      }
+    }
+    h5{
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 200;
+    }
+    .btn{
+      margin-top: 15px;
+      color: #fff;
+      background-color: #ccc;
+      font-size: 25px;
+    }
+  }
+
+  .field{
+    margin-bottom: 80px;
+
+    .field-label{
+      padding: 10px 0;
+      letter-spacing: 1px;
+      font-size: 10px;
+      font-weight: 150;
+    
+      i{
+        font-size: 8px;
+      }
+    }
+    .field-input{
+      input{
+        width: 100%;
+        padding: 10px;
+        letter-spacing: 1px;
+
+      }
+    }
+  }
+  .btn{
+    display: inline-block;
+    height: 40px;
+    padding: 0 15px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+
+  }
+  input[type='submit']{
+    float: left;
+    margin-top: 20px;
+    color: #fff;
+    background-color:rgb(117, 117, 151);  
+  }
+  .field-label{
+    .field_with_errors{
+      position: relative;
+
+      &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: #d65f4c;
+      }
+    }
+  }
+}
+
+#error_explanation{
+  margin: 20px 0;
+  padding: 20px 30px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+
+  h2{
+    margin-bottom: 10px;
+    color: #d65f3c;
+    font-size: 14px;
+
+  }
+
+  ul{
+    margin: 0;
+    padding-left: 17px;
+    list-style: square;
+
+
+  }
+  li{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+  }
+}
