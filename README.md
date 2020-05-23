@@ -28,6 +28,7 @@
 |------|----|-------|
 |type|string|null: false|
 |name|string|null: false|
+|image|text|null: false|
 |url||text|
 |comment|text|null: false|
 ### Association
