@@ -1,2 +1,3 @@
-= form_for @spot do |f|
-  = f.text_field :type, class: "spot-form__input",placeholder
+.spot-form
+  %h1  新規スポットの登録
+  = render partial: 'form', locals: { spot: @spot }

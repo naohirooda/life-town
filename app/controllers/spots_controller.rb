@@ -9,7 +9,12 @@ class SpotsController < ApplicationController
   end
 
   def create
-    Spot.create(spot_params)
+    @spot = Spot.new(spot_params)
+    if @spot.save
+      redirect_to root_path, notice: 'スポット登録ができました'
+    else
+      render :new
+    end
   end
 
   def destroy
@@ -23,12 +28,16 @@ class SpotsController < ApplicationController
 
   def update
     spot = Spot.find(params[:id])
-    spot.update(spot_params)
+    if @spot.update(spot_params)
+      redirect_to root_path, notice: 'スポットを更新しました'
+    else
+      render :edit
+    end      
   end
 
   private
   def spot_params
-    params.require(:spot).permit(:type, :name, :image, :url, :comment)
+    params.require(:spot).permit(:kind, :name, :image, :url, :comment)
   end
 
 

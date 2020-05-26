@@ -1,0 +1,36 @@
+
+.new_spot {
+  width: 980px;
+  margin: 70px auto;
+  padding: 70px;
+  background-color: #ceced4;
+  border: 3px solid rgb(236, 236, 109);
+  border-radius: 10px;  
+  &:after{
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+  .spot-form{
+    padding-top: 50px;
+    h1{
+      font-size:20px;
+      text-align: center;
+     
+    }
+  
+    .spot-form__input{
+      height: 50px;
+      width: 500px;
+      margin: 40px;
+    }
+
+    .spot-form__action-btn{
+      display: inline-block;
+      padding: 12px 25px;
+      color: #fff;
+      background-color: #1491df;
+      border: 0;
+    }
+  }

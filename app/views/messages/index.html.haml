@@ -11,15 +11,14 @@
         %ul.main-box
           %li.main-box__user          
             = current_user.name
-          %li.main-box__new-topic  
-            NewTopic   
+          %li.main-box__new-topic
+            = link_to new_spot_path do  
+              NewTopic   
           %li.main-box__all-topic
             AllTopic         
-          %li.main-box__logout
-            Logout
           %li.main-box__edit
             = link_to edit_user_path(current_user) do
-              編集
+              Edit
   .content
     .content-box
     

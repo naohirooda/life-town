@@ -1,0 +1,6 @@
+.content.row
+  -@spots.each do |spot|
+    .content_post{:style => "background-image: url(#{spot.image});"}
+      = simple_format(spot.text)
+      %span.name
+        = spot.name

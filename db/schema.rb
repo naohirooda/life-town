@@ -23,10 +23,11 @@ ActiveRecord::Schema.define(version: 20200523002831) do
   end
 
   create_table "spots", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "type",                     null: false
+    t.string   "kind",                     null: false
     t.string   "name",                     null: false
     t.text     "url",        limit: 65535
-    t.text     "comment",    limit: 65535, null: false
+    t.text     "memo",       limit: 65535, null: false
+    t.text     "image",      limit: 65535, null: false
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end

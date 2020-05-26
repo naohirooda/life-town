@@ -1,0 +1,33 @@
+= form_for spot do |f|
+  - if spot.errors.any?
+    .spot-form__errors
+      %h2= "#{spot.errors.full_messages.count}件のエラーが発生しました"
+      %ul
+        - spot.errors.full_messages.each do |message|
+          %li= message
+
+  .spot-form__field.clearfix
+    .spot-form__field--left
+      = f.label :kind, class: 'spot-form__label'
+    .spot-form__field--right
+      = f.text_field :kind, class: 'spot__kind spot-form__input', placeholder: '項目を入力してください'
+    .spot-form__field--left
+      = f.label :name, class: 'spot-form__label'
+    .spot-form__field--right
+      = f.text_field :name, class: 'spot__name spot-form__input', placeholder: 'スポット名を入力してください'
+    .spot-form__field--left
+      = f.label :url, class: 'spot-form__label'
+    .spot-form__field--right
+      = f.text_field :url, class: 'spot__url spot-form__input', placeholder: 'urlがあれば入力してください'
+    .spot-form__field--left
+      = f.label :memo, class: 'spot-form__label'
+    .spot-form__field--right
+      = f.text_field :memo, class: 'spot__memo spot-form__input', placeholder: 'オススメのポイントを入力してください'
+    .spot-form__field--left
+      = f.label :image, class: 'spot-form__label'
+    .spot-form__field--right
+      = f.text_field :image, class: 'spot__image spot-form__input', placeholder: '写真'
+  .spot-form__field.clearfix
+    .spot-form__field--left
+    .spot-form__field--right
+      = f.submit class: 'spot-form__action-btn'   
