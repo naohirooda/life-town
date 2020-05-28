@@ -6,6 +6,8 @@
         .side-box__logo__live
           Spot Library
           
+
+          
     .main
       .main-box
         %ul.main-box
@@ -15,7 +17,8 @@
             = link_to new_spot_path do  
               NewTopic   
           %li.main-box__all-topic
-            AllTopic         
+            = link_to spots_path do
+              AllTopic         
           %li.main-box__edit
             = link_to edit_user_path(current_user) do
               Edit

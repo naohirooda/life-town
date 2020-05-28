@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200523002831) do
+ActiveRecord::Schema.define(version: 20200527100031) do
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at", null: false
@@ -27,9 +27,10 @@ ActiveRecord::Schema.define(version: 20200523002831) do
     t.string   "name",                     null: false
     t.text     "url",        limit: 65535
     t.text     "memo",       limit: 65535, null: false
-    t.text     "image",      limit: 65535, null: false
+    t.text     "image",      limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

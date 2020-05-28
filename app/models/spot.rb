@@ -1,10 +1,9 @@
 class Spot < ApplicationRecord
-  has_many :comment
-  has_many :good
+  has_many :comments
+  has_many :goods
   belongs_to :user
 
   validates :kind, presence: true, unless: :image?
-
-  mount_uploader :image, ImageUploader
+ 
 
 end

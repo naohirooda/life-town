@@ -5,7 +5,7 @@ class CreateSpots < ActiveRecord::Migration[5.0]
       t.string :name, null: false
       t.text :url
       t.text :memo, null: false
-      t.text :image, null: false
+      t.text :image
       t.timestamps
     end
   end
